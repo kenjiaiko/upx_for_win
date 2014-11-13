@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ECBA1307-7495-481D-BD40-C9F75ECF0822}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>upu</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\upx_unpack\upx-3.91-src\src;$(SolutionDir)\upx_unpack\zlib128-dll\include;$(SolutionDir)\upx_unpack\lzma</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\compress.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\compress_lzma.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\compress_ucl.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\compress_zlib.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\c_file.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\c_init.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\c_none.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\c_screen.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\except.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\file.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\filter.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\filteri.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\help.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\lefile.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\linker.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\main.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\mem.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\msg.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\packer.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\packer_c.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\packer_f.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\packhead.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\packmast.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\pefile.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\pepfile.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_armpe.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_com.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_djgpp2.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_elks.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_exe.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_lx_elf.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_lx_exc.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_lx_interp.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_lx_sh.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_mach.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_ps1.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_sys.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_tmt.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_tos.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_unix.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_vmlinx.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_vmlinz.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_w16ne.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_w32pe.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_w64pep.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\p_wcle.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\snprintf.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\stdcxx.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\s_djgpp2.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\s_object.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\s_vcsa.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\s_win32.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\ui.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\util.cpp" />
+    <ClCompile Include="..\upx_unpack\upx-3.91-src\src\work.cpp" />
+    <ClCompile Include="exp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\bele.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\bele_policy.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\bptr.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\compress.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\conf.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\console.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\except.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\file.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\filter.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\lefile.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\linker.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\mem.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\miniacc.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\options.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\packer.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\packmast.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\pefile.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\pepfile.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_armpe.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_com.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_djgpp2.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_elf.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_elf_enum.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_exe.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_lx_elf.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_lx_exc.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_lx_interp.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_lx_sh.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_mach.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_mach_enum.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_ps1.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_sys.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_tmt.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_tos.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_unix.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_vmlinx.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_vmlinz.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_vxd.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_w16ne.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_w32pe.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_w64pep.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\p_wcle.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\screen.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\snprintf.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\stdcxx.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\ui.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\util.h" />
+    <ClInclude Include="..\upx_unpack\upx-3.91-src\src\version.h" />
+    <ClInclude Include="exp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\upx_unpack\lzma\C\Util\LzmaLib\O\LZMA.lib" />
+    <Library Include="..\upx_unpack\ucl-1.03\ucl.lib" />
+    <Library Include="..\upx_unpack\zlib128-dll\lib\zdll.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
